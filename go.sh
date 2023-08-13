@@ -1,6 +1,7 @@
 #!/bin/bash
 set -x
 
+
 rm -rf graph_test xla_test
 
 export TF_DUMP_GRAPH_PREFIX=$(pwd)/graph_test
@@ -23,6 +24,7 @@ export XLA_FLAGS="\
 
 ./make_test_graph.py
 
+## $(pwd)文件夹放在tensorflow源码根目录下
 #bazel build \
 #	--config=dbg \
 #	--copt=-Wno-gnu-offsetof-extensions \
