@@ -1,0 +1,25 @@
+# Text form of tensorflow.tf2xla.Config proto.
+feed {
+  id { node_name: "x_hold" }
+  shape {
+    dim { size: 2 }
+    dim { size: 3 }
+  }
+}
+feed {
+  id { node_name: "y_hold" }
+  shape {
+    dim { size: 3 }
+    dim { size: 4 }
+  }
+}
+feed {
+  id { node_name: "basis" }
+  shape {
+    dim { size: 2 }
+    dim { size: 4 }
+  }
+}
+fetch {
+  id { node_name: "out" }
+}
